@@ -5,13 +5,6 @@ export default {
 		},
 	},
 	properties: {
-		textColor: {
-			label: {
-				en: 'Text color',
-			},
-			type: 'Color',
-			defaultValue: '#F23636',
-		},
 		events: {
 			label: {en: 'Events'},
 			type: 'Array',
