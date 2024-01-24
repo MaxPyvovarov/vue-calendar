@@ -7,7 +7,6 @@
 		:disable-views="['years', 'year', 'day']"
 		events-on-month-view="short"
 		:events="events"
-		class="vuecal--blue-theme"
 	/>
 </template>
 
@@ -19,8 +18,8 @@ export default {
 	components: {VueCal},
 	props: {
 		content: {type: Object, required: true},
-		wwElementState: {type: Object, required: true},
 	},
+	// emits: ['trigger-event', 'update:content:effect'],
 	computed: {
 		events() {
 			return this.content.events;
@@ -51,15 +50,9 @@ export default {
 	display: none;
 }
 
-.vuecal__event.project1 {
+.vuecal__cell-events .vuecal__event {
 	background-color: #002952;
 	border: 1px solid #002952;
-	color: #fff;
-}
-
-.vuecal__event.project2 {
-	background-color: #02488f;
-	border: 1px solid #02488f;
 	color: #fff;
 }
 
@@ -67,32 +60,3 @@ export default {
 	text-align: center;
 }
 </style>
-
-<!-- <template>
-	<div class="my-element">
-		<p :style="textStyle">I am really a new component!</p>
-	</div>
-</template>
-
-<script>
-export default {
-	props: {
-		content: {type: Object, required: true},
-	},
-	computed: {
-		textStyle() {
-			return {
-				color: this.content.textColor,
-			};
-		},
-	},
-};
-</script>
-
-<style lang="scss" scoped>
-.my-element {
-	p {
-		font-size: 18px;
-	}
-}
-</style> -->
