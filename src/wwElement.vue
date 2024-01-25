@@ -30,7 +30,8 @@ export default {
 	methods: {
 		handleEventClick(event, domEvent) {
 			debugger;
-			console.log(event, domEvent);
+			console.log('event', event);
+			console.log('event start', event.start);
 			this.$emit('trigger-event', {
 				name: 'event:click',
 				event: {
@@ -49,16 +50,37 @@ export default {
 			});
 		},
 		handleCellClick(event) {
-			debugger;
-			console.log(event);
+			const date = 'date' in event ? event.date : event;
+			const calendar = 'split' in event ? event.split : null;
+			console.log('date', date);
+			console.log('calendar', calendar);
 			this.$emit('trigger-event', {
 				name: 'cell:click',
 				event: {
-					cell: {event},
+					cell: {date, calendar},
 					currentView: this.currentView,
 				},
 			});
 		},
+
+		/* wwEditor:start */
+		getTestEvent() {
+			if (!this.events.length) throw new Error('No event found');
+			return {
+				rawEventData: this.events[0].rawEventData,
+				event: {
+					start: this.events[0].start,
+					end: this.events[0].end,
+					title: this.events[0].title,
+					content: this.events[0].content,
+					calendar: this.events[0].split,
+					allDay: this.events[0].allDay,
+				},
+				currentView: this.currentView,
+				domEvent: {},
+			};
+		},
+		/* wwEditor:end */
 	},
 };
 </script>
