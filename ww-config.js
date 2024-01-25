@@ -53,4 +53,36 @@ export default {
 			},
 		},
 	},
+	triggerEvents: [
+		{
+			name: 'event:click',
+			label: {en: 'On event click'},
+			event: {
+				rawEventData: {},
+				event: {
+					start: '',
+					end: '',
+					title: '',
+					content: '',
+					calendar: null,
+					allDay: null,
+				},
+				currentView: 'years | year | month | week | day',
+				domEvent: {},
+			},
+			default: true,
+			getTestEvent: 'getTestEvent',
+		},
+		{
+			name: 'cell:click',
+			label: {en: 'On cell click'},
+			event: {
+				cell: {
+					date: new Date(),
+					calendar: null,
+				},
+				currentView: 'years | year | month | week | day',
+			},
+		},
+	],
 };

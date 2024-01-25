@@ -7,6 +7,7 @@
 		:disable-views="['years', 'year', 'day']"
 		events-on-month-view="short"
 		:events="events"
+		@cell-click="handleCellClick"
 	/>
 </template>
 
@@ -19,10 +20,44 @@ export default {
 	props: {
 		content: {type: Object, required: true},
 	},
-	// emits: ['trigger-event', 'update:content:effect'],
+	emits: ['trigger-event'],
 	computed: {
 		events() {
 			return this.content.events;
+		},
+	},
+	methods: {
+		handleEventClick(event, domEvent) {
+			debugger;
+			console.log(event, domEvent);
+			this.$emit('trigger-event', {
+				name: 'event:click',
+				event: {
+					rawEventData: event.rawEventData,
+					event: {
+						start: event.start,
+						end: event.end,
+						title: event.title,
+						content: event.content,
+						calendar: event.split,
+						allDay: event.allDay,
+					},
+					currentView: this.currentView,
+					domEvent,
+				},
+			});
+		},
+		handleCellClick(event) {
+			debugger;
+			console.log(event);
+			const date = 'date' in event ? event.date : event;
+			this.$emit('trigger-event', {
+				name: 'cell:click',
+				event: {
+					cell: {date},
+					currentView: this.currentView,
+				},
+			});
 		},
 	},
 };
