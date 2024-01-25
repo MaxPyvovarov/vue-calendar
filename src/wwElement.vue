@@ -8,6 +8,7 @@
 		events-on-month-view="short"
 		:events="events"
 		@cell-click="handleCellClick"
+		@event-click="handleEventClick"
 	/>
 </template>
 

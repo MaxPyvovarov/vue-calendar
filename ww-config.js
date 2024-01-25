@@ -79,7 +79,6 @@ export default {
 			event: {
 				cell: {
 					date: new Date(),
-					calendar: null,
 				},
 				currentView: 'years | year | month | week | day',
 			},
