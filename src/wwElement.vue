@@ -50,11 +50,10 @@ export default {
 		handleCellClick(event) {
 			debugger;
 			console.log(event);
-			const date = 'date' in event ? event.date : event;
 			this.$emit('trigger-event', {
 				name: 'cell:click',
 				event: {
-					cell: {date},
+					cell: {event},
 					currentView: this.currentView,
 				},
 			});
