@@ -29,9 +29,6 @@ export default {
 	},
 	methods: {
 		handleEventClick(event, domEvent) {
-			debugger;
-			console.log('event', event);
-			console.log('event start', event.start);
 			this.$emit('trigger-event', {
 				name: 'event:click',
 				event: {
@@ -52,8 +49,6 @@ export default {
 		handleCellClick(event) {
 			const date = 'date' in event ? event.date : event;
 			const calendar = 'split' in event ? event.split : null;
-			console.log('date', date);
-			console.log('calendar', calendar);
 			this.$emit('trigger-event', {
 				name: 'cell:click',
 				event: {

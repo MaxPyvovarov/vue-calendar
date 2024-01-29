@@ -67,7 +67,7 @@ export default {
 					calendar: null,
 					allDay: null,
 				},
-				currentView: 'years | year | month | week | day',
+				currentView: 'month | week',
 				domEvent: {},
 			},
 			default: true,
@@ -80,7 +80,7 @@ export default {
 				cell: {
 					date: new Date(),
 				},
-				currentView: 'years | year | month | week | day',
+				currentView: 'month | week',
 			},
 		},
 	],
