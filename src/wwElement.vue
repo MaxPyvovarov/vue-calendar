@@ -85,14 +85,28 @@ export default {
 	overflow: hidden;
 }
 
-.vuecal--month-view .vuecal__cell {
-	height: 80px;
+.vuecal--month-view .vuecal__flex .vuecal__cell {
+	height: 90px;
 }
 
 .vuecal--month-view .vuecal__cell-content {
 	justify-content: flex-start;
-	height: 100%;
+	height: 105%;
 	align-items: center;
+}
+
+.vuecal--month-view .vuecal__cell-content .vuecal__cell-events {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+
+.vuecal__cell-content .vuecal__cell-events .vuecal__event {
+	max-width: 97%;
+	margin: 0 auto;
+	max-height: 26px;
+	overflow: hidden;
+	border-radius: 16px;
 }
 
 .vuecal--month-view .vuecal__cell-date {
