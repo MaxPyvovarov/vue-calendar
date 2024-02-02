@@ -120,7 +120,7 @@ export default {
 	align-items: center;
 }
 
-.vuecal__event .vuecal__event-title p:first-child,
+/* .vuecal__event .vuecal__event-title p:first-child,
 .vuecal__event .vuecal__event-title p:last-child {
 	color: #fff;
 	font-weight: 700;
@@ -139,5 +139,5 @@ export default {
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
-}
+} */
 </style>
