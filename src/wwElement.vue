@@ -102,10 +102,9 @@ export default {
 }
 
 .vuecal__cell-content .vuecal__cell-events .vuecal__event {
-	max-width: 97%;
-	margin: 0 auto;
-	max-height: 26px;
-	overflow: hidden;
+	background-color: transparent;
+	border: none;
+	color: #fff;
 	border-radius: 16px;
 }
 
@@ -116,13 +115,29 @@ export default {
 	display: none;
 }
 
-.vuecal__cell-events .vuecal__event {
-	background-color: #002952;
-	border: 1px solid #002952;
-	color: #fff;
+.vuecal__cell-content .vuecal__cell-events .vuecal__event .vuecal__event-title {
+	display: flex;
+	align-items: center;
 }
 
-.vuecal--short-events .vuecal__event-title {
+.vuecal__event .vuecal__event-title p:first-child,
+.vuecal__event .vuecal__event-title p:last-child {
+	color: #fff;
+	font-weight: 700;
+	background-color: #0b0052;
+	padding: 3px 5px;
+	border-radius: 23px;
+}
+
+.vuecal__event .vuecal__event-title p:first-child {
+	padding: 3px 7px;
+}
+
+.vuecal__event .vuecal__event-title p:last-child {
+	flex-grow: 1;
 	text-align: center;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
 </style>
