@@ -82,41 +82,41 @@ export default {
 
 <style>
 	
-#planning .vuecal__flex.vuecal__cells.month-view {
+.vuecal__flex.vuecal__cells.month-view {
 	overflow: hidden;
 }
 
-#planning .vuecal--month-view .vuecal__flex .vuecal__cell {
+.vuecal--month-view .vuecal__flex .vuecal__cell {
 	height: 90px;
 }
 
-#planning .vuecal--month-view .vuecal__cell-content {
+.vuecal--month-view .vuecal__cell-content {
 	justify-content: flex-start;
 	height: 105%;
 	align-items: center;
 }
 
-#planning .vuecal--month-view .vuecal__cell-content .vuecal__cell-events {
+.vuecal--month-view .vuecal__cell-content .vuecal__cell-events {
 	display: flex;
 	flex-direction: column;
 	gap: 2px;
 }
 
-#planning .vuecal__cell-content .vuecal__cell-events .vuecal__event {
+.vuecal__cell-content .vuecal__cell-events .vuecal__event {
 	background-color: transparent;
 	border: none;
 	color: #fff;
 	border-radius: 16px;
 }
 
-#planning .vuecal--month-view .vuecal__cell-date {
+.vuecal--month-view .vuecal__cell-date {
 	padding: 4px;
 }
-#planning .vuecal--month-view .vuecal__no-event {
+.vuecal--month-view .vuecal__no-event {
 	display: none;
 }
 
-#planning .vuecal__cell-content .vuecal__cell-events .vuecal__event .vuecal__event-title {
+.vuecal__cell-content .vuecal__cell-events .vuecal__event .vuecal__event-title {
 	display: flex;
 	align-items: center;
 }
