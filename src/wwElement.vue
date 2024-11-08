@@ -87,6 +87,7 @@ export default {
 }
 
 #planning .vuecal {
+	border-radius: 30px;
 	background: #F3F1ED !important;
 	color: #173F35 !important;
 }
