@@ -86,6 +86,11 @@ export default {
 	overflow: hidden;
 }
 
+#planning .vuecal__flex.vuecal {
+	background: #F3F1ED !important;
+	color: #173F35 !important;
+}
+
 #planning .vuecal--month-view .vuecal__flex .vuecal__cell {
 	height: 90px;
 }
