@@ -86,7 +86,7 @@ export default {
 	overflow: hidden;
 }
 
-#planning .vuecal__flex.vuecal[data-v-3b250104] {
+#planning .vuecal {
 	background: #F3F1ED !important;
 	color: #173F35 !important;
 }
