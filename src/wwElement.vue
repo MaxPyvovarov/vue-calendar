@@ -91,6 +91,11 @@ export default {
 	color: #173F35 !important;
 }
 
+#planning .vuecal__title-bar {
+	background-color:  #173F35 !important;
+	color: #D6D2C4 !important;
+}
+
 #planning .vuecal--month-view .vuecal__flex .vuecal__cell {
 	height: 90px;
 }
