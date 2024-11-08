@@ -91,7 +91,7 @@ export default {
 	color: #173F35 !important;
 }
 
-#planning .vuecal__title-bar {
+#planning .vuecal .vuecal__title-bar {
 	background-color:  #173F35 !important;
 	color: #D6D2C4 !important;
 }
